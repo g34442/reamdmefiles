@@ -11,7 +11,7 @@ The UI exposes a set of QE "agents" and workflows to:
 - Generate test plans using templates and configurable sections.
 - Analyze performance testing reports.
 
-## Main screens / workflows
+## Main screens / Agentic Workflows
 
 ### Agents → Test Case Design
 - **Test Case Generator — Jira**
@@ -35,28 +35,6 @@ The UI exposes a set of QE "agents" and workflows to:
 ### Agents → Performance Testing
 - Upload `summary.html`, `Report5.csv`, `Report3.csv` + SLA inputs
 
-## Repository structure (observed)
-
-```text
-.github/workflows/
-_tests_/
-cypress/
-docs/
-helios/
-node_server/
-ocp_configs/
-openshift/
-src/
-angular.json
-package.json
-proxy.conf.js
-karma.conf.js
-cypress.config.ts
-Dockerfile
-docker-entrypoint.sh
-ngsw-config.json
-```
-
 ## End-to-end request flow (high level)
 
 1. User selects a workflow and provides inputs (Jira/text/files)
@@ -68,7 +46,8 @@ ngsw-config.json
 ## Local development (minimal)
 
 ### Prerequisites
-- Node.js + npm
+- Node.js 
+- npm
 
 ### Install
 ```bash
@@ -82,23 +61,4 @@ npm start
 
 > `npm start` runs Angular dev server with `proxy.conf.js`.
 
-## Enterprise compliance notes (quick)
-
-- Do **not** paste secrets/tokens into UI fields.
-- Treat Jira and uploaded documents as sensitive.
-- Avoid storing outputs containing sensitive data outside approved locations.
-
-## Documentation
-
-- VDI setup guide: [VDI_Users_Setup_Guide.md](VDI_Users_Setup_Guide.md)
-
-## Glossary (minimal)
-
-- **BDD/Gherkin**: Feature/Scenario/Given-When-Then test format.
-- **qTest**: Test management tool used for test case storage and export.
-- **Interceptor**: Angular HTTP middleware for auth/logging/error handling.
-
-## Open questions (to finalize accuracy)
-
-- What is the backend base URL and proxy mapping path?
-- How does auth work in the browser (token source/expiry/refresh)?
+## Development Team @RBC
